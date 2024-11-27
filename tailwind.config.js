@@ -8,9 +8,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        cwhite: "var(--cwhite)",
+        cblack: "var(--cblack)",
+        cdarkpurple: "var(--cdarkpurple)",
+        clightpurple: "var(--clightpurple)",
+        cturquoise: "var(--cturquoise)",
+        clightgreen: "var(--clightgreen)",
+        cpink: "var(--cpink)",
+        clightblue: "var(--clightblue)",
+        cyellow: "var(--cyellow)",
       },
+      fontFamily: { oswald: "Oswald", redhat: "Red Hat" },
     },
   },
   plugins: [],
