@@ -11,6 +11,7 @@ module.exports = {
         cwhite: "var(--cwhite)",
         cblack: "var(--cblack)",
         cdarkpurple: "var(--cdarkpurple)",
+        cdarkerpurple: "var(--cdarkerpurple)",
         clightpurple: "var(--clightpurple)",
         cturquoise: "var(--cturquoise)",
         clightgreen: "var(--clightgreen)",
