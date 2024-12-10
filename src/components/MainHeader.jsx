@@ -1,6 +1,6 @@
 import { useState } from "react";
 const MainHeader = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <header className="h-16 bg-[--darkerpurple] border-b-[--cdarkpurple] border-b flex w-full items-center ">
       <nav className="text-[--cwhite] font-oswald font-light w-full">
