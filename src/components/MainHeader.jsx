@@ -3,9 +3,9 @@ const MainHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <header className="h-16 bg-[--darkerpurple] border-b-[--cdarkpurple] border-b flex w-full items-center ">
-      <nav className="text-[--cwhite] font-oswald font-light w-full">
+      <nav className="text-[--cwhite] font-oswald font-light w-full   ">
         <ul className="md:flex gap-4 justify-self-end items-center mr-2 text-lg hidden">
-          <li className="border-b-[--clightpurple]  py-4 px-2 ">About Me</li>
+          <li className="border-b-[--clightpurple]  py-4 px-2  ">About Me</li>
           <li className="py-4 px-2">Projects</li>
           <li className="py-4 px-2">Contact Me</li>
           <li className="py-4 px-2">Other interests</li>
