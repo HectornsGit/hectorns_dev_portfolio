@@ -19,7 +19,7 @@ module.exports = {
         clightblue: "var(--clightblue)",
         cyellow: "var(--cyellow)",
       },
-      fontFamily: { oswald: "Oswald", redhat: "Red Hat" },
+      fontFamily: { oswald: "Oswald", redhat: "Red Hat Text" },
     },
   },
   plugins: [],
