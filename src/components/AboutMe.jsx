@@ -3,7 +3,7 @@ const AboutMe = () => {
     <section className="ABOUT-ME">
       <article className="mx-auto flex flex-col mt-8 justify-center 2xl:w-4/6 lg:w-5/6 md:w-8/12 w-11/12">
         <header>
-          <h3 className="my-6 xl:text-3xl lg:text-2xl md:text-xl font-semibold italic text-[--cyellow]  font-oswald">
+          <h3 className="my-6 xl:text-3xl lg:text-2xl sm:text-xl font-semibold italic text-[--cyellow]  font-oswald">
             ABOUT ME
           </h3>
         </header>
@@ -19,7 +19,7 @@ const AboutMe = () => {
             </p>
             <div className="xl:mb-8 mb-4">
               <p className="">
-                Now I can bring all this experience and passion to your team.
+                Now I can bring all this experience and passion to your team!
               </p>
               <span className="pl-4 lg:text-xl font-medium font-oswald italic text-cturquoise">
                 <br></br> WANT TO KNOW MORE?
