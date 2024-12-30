@@ -1,9 +1,30 @@
 "use client";
 import MainHeader from "../components/MainHeader";
 import AboutMe from "../components/AboutMe";
-import ProjectCard from "@/components/ProjectCard";
-
+import { useState } from "react";
+import ListProjectCards from "@/components/projects/listProjectCards";
 export default function Home() {
+  const [projectList, setProjectList] = useState([
+    {
+      projectName: "Freeday Quiz",
+      projectId: 1,
+      projectImage:
+        "https://media.licdn.com/dms/image/v2/D4D22AQHjWOK0_hMGLg/feedshare-shrink_1280/feedshare-shrink_1280/0/1733743357297?e=1738195200&v=beta&t=C2AHZCDOzztMMzhZdd-L6DOM3R80Sq9Wz5s9l520jG0",
+    },
+    {
+      projectName: "Heflú",
+      projectId: 2,
+      projectImage:
+        "https://media.licdn.com/dms/image/v2/D4D22AQHjWOK0_hMGLg/feedshare-shrink_1280/feedshare-shrink_1280/0/1733743357297?e=1738195200&v=beta&t=C2AHZCDOzztMMzhZdd-L6DOM3R80Sq9Wz5s9l520jG0",
+    },
+    {
+      projectName: "Hoorry",
+      projectId: 3,
+      projectImage:
+        "https://media.licdn.com/dms/image/v2/D4D22AQHjWOK0_hMGLg/feedshare-shrink_1280/feedshare-shrink_1280/0/1733743357297?e=1738195200&v=beta&t=C2AHZCDOzztMMzhZdd-L6DOM3R80Sq9Wz5s9l520jG0",
+    },
+  ]);
+
   return (
     <>
       <MainHeader></MainHeader>
@@ -25,38 +46,15 @@ export default function Home() {
           </div>
         </header>
         <AboutMe></AboutMe>
-        <section className=" flex flex-col border mt-8 w-full self-center ">
+        <section className=" flex flex-col mt-8 w-full self-center ">
           <header className="w-11/12 self-center">
             <h3 className="my-6 xl:text-3xl lg:text-2xl sm:text-xl font-semibold italic text-[--cyellow]  font-oswald">
               PROJECTS
             </h3>
           </header>
-          <ul className="w-full flex sm:flex-row flex-wrap flex-col">
-            <li className="grow xl:w-1/4 md:w-1/3 sm:w-1/2">
-              <ProjectCard></ProjectCard>
-            </li>{" "}
-            <li className="grow xl:w-1/4 md:w-1/3 sm:w-1/2">
-              <ProjectCard></ProjectCard>
-            </li>{" "}
-            <li className="grow xl:w-1/4 md:w-1/3 sm:w-1/2">
-              <ProjectCard></ProjectCard>
-            </li>{" "}
-            <li className="grow xl:w-1/4 md:w-1/3 sm:w-1/2">
-              <ProjectCard></ProjectCard>
-            </li>{" "}
-            <li className="grow xl:w-1/4 md:w-1/3 sm:w-1/2">
-              <ProjectCard></ProjectCard>
-            </li>{" "}
-            <li className="grow xl:w-1/4 md:w-1/3 sm:w-1/2">
-              <ProjectCard></ProjectCard>
-            </li>{" "}
-            <li className="grow xl:w-1/4 md:w-1/3 sm:w-1/2">
-              <ProjectCard></ProjectCard>
-            </li>
-            <li className="grow xl:w-1/4 md:w-1/3 sm:w-1/2"></li>
-            <li className="grow xl:w-1/4 md:w-1/3 sm:w-1/2"></li>
-            <li className="grow xl:w-1/4 md:w-1/3 sm:w-1/2"></li>
-          </ul>
+          {projectList.length > 0 && (
+            <ListProjectCards projectList={projectList}></ListProjectCards>
+          )}
         </section>
       </main>
     </>
