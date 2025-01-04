@@ -26,9 +26,9 @@ const AboutMe = () => {
               </p>
               <ul className="flex justify-between items-center mt-14">
                 <li>
-                  <button className="lg:text-2xl font-medium font-oswald italic text-cturquoise flex justify-between  text-right">
+                  <p className="lg:text-2xl font-medium font-oswald italic text-cturquoise flex justify-between  text-right">
                     WANT TO KNOW MORE?
-                  </button>
+                  </p>
                 </li>
                 <li>
                   <ul className=" flex justify-between items-end text-right gap-4">
@@ -38,18 +38,30 @@ const AboutMe = () => {
                         target="blank"
                       >
                         <LinkedinLogo
-                          style={" fill-white md:w-12 w-8 md:h-12 h-8"}
+                          style={
+                            " hover:fill-cyellow fill-white md:w-12 w-8 md:h-12 h-8"
+                          }
                         />
                       </a>
                     </li>
                     <li>
                       <a href="https://github.com/HectornsGit" target="blank">
                         <GithubLogo
-                          style={" fill-white md:w-12 w-8 md:h-12 h-8"}
+                          style={
+                            " hover:fill-cyellow fill-white md:w-12 w-8 md:h-12 h-8"
+                          }
                         />
                       </a>
                     </li>
-                    <li>CV</li>
+                    <li>
+                      <a
+                        className="hover:text-cyellow  lg:text-4xl font-medium font-oswald italic  flex justify-between  text-right "
+                        href="./Hector_Novoa_Segade_CV_11_11_2024.pdf"
+                        download={true}
+                      >
+                        CV
+                      </a>
+                    </li>
                   </ul>
                 </li>
               </ul>
