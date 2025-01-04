@@ -55,7 +55,7 @@ const AboutMe = () => {
                     </li>
                     <li>
                       <a
-                        className="hover:text-cyellow  lg:text-4xl font-medium font-oswald italic  flex justify-between  text-right "
+                        className="hover:text-cyellow  lg:text-4xl font-medium font-oswald italic  flex justify-between  text-right text-3xl "
                         href="./Hector_Novoa_Segade_CV_11_11_2024.pdf"
                         download={true}
                       >
