@@ -14,20 +14,17 @@ export default function Home() {
     {
       projectName: "Heflú",
       projectId: 2,
-      projectImage:
-        "https://media.licdn.com/dms/image/v2/D4D22AQHjWOK0_hMGLg/feedshare-shrink_1280/feedshare-shrink_1280/0/1733743357297?e=1738195200&v=beta&t=C2AHZCDOzztMMzhZdd-L6DOM3R80Sq9Wz5s9l520jG0",
-    },
-    {
-      projectName: "Hoorry",
-      projectId: 3,
-      projectImage:
-        "https://media.licdn.com/dms/image/v2/D4D22AQHjWOK0_hMGLg/feedshare-shrink_1280/feedshare-shrink_1280/0/1733743357297?e=1738195200&v=beta&t=C2AHZCDOzztMMzhZdd-L6DOM3R80Sq9Wz5s9l520jG0",
+      projectImage: "/heflu_thumbnail.png",
     },
     {
       projectName: "VHS Collection",
+      projectId: 3,
+      projectImage: "/vhs_thumbnail.png",
+    },
+    {
+      projectName: "Hoorry",
       projectId: 4,
-      projectImage:
-        "https://media.licdn.com/dms/image/v2/D4D22AQHjWOK0_hMGLg/feedshare-shrink_1280/feedshare-shrink_1280/0/1733743357297?e=1738195200&v=beta&t=C2AHZCDOzztMMzhZdd-L6DOM3R80Sq9Wz5s9l520jG0",
+      projectImage: "/hoorry_thumbnail.png",
     },
   ]);
 
