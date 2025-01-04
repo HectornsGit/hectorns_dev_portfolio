@@ -23,6 +23,12 @@ export default function Home() {
       projectImage:
         "https://media.licdn.com/dms/image/v2/D4D22AQHjWOK0_hMGLg/feedshare-shrink_1280/feedshare-shrink_1280/0/1733743357297?e=1738195200&v=beta&t=C2AHZCDOzztMMzhZdd-L6DOM3R80Sq9Wz5s9l520jG0",
     },
+    {
+      projectName: "VHS Collection",
+      projectId: 4,
+      projectImage:
+        "https://media.licdn.com/dms/image/v2/D4D22AQHjWOK0_hMGLg/feedshare-shrink_1280/feedshare-shrink_1280/0/1733743357297?e=1738195200&v=beta&t=C2AHZCDOzztMMzhZdd-L6DOM3R80Sq9Wz5s9l520jG0",
+    },
   ]);
 
   return (
@@ -47,7 +53,7 @@ export default function Home() {
         </header>
         <AboutMe></AboutMe>
         <section className=" flex flex-col mt-8 w-full self-center ">
-          <header className="w-11/12 self-center">
+          <header className=" self-center 2xl:w-4/6 lg:w-5/6 md:w-8/12 w-11/12">
             <h3 className="my-6 xl:text-3xl lg:text-2xl sm:text-xl font-semibold italic text-[--cyellow]  font-oswald">
               PROJECTS
             </h3>
