@@ -1,3 +1,6 @@
+import GithubLogo from "./logos/GithubLogo";
+import LinkedinLogo from "./logos/LinkedinLogo";
+
 const AboutMe = () => {
   return (
     <section className="ABOUT-ME mb-12">
@@ -8,8 +11,8 @@ const AboutMe = () => {
           </h3>
         </header>
         <div className="flex lg:flex-row flex-col">
-          <div className=" lg:w-2/3  md:mx-0  mx-2 lg:mt-0 mt-4 order-2 text-[--cwhite] font-regular   xl:text-2xl md:text-xl  lg:leading-relaxed  font-redhat">
-            <p className="xl:mb-8 mb-4">
+          <div className="flex flex-col lg:w-2/3  md:mx-0  mx-2 lg:mt-0 mt-4 order-2 text-[--cwhite] font-regular   xl:text-2xl md:text-xl  lg:leading-relaxed  font-redhat">
+            <p className="  lg:mb-8 mb-4">
               I{"'"}m Héctor, a fullstack developer passionate about all kind of
               graphic arts, games and music.
             </p>
@@ -17,15 +20,42 @@ const AboutMe = () => {
               In my projects I worked in different areas: Backend, frontend,
               design, even some basic devops and lead or organizative roles.
             </p>
-            <div className="xl:mb-8 mb-4">
+            <div className=" lg:mb-8 mb-4">
               <p className="">
                 Now I can bring all this experience and passion to your team!
               </p>
-              <span className="pl-4 lg:text-xl font-medium font-oswald italic text-cturquoise">
-                <br></br> WANT TO KNOW MORE?
-              </span>
+              <ul className="flex justify-between items-center mt-14">
+                <li>
+                  <button className="lg:text-2xl font-medium font-oswald italic text-cturquoise flex justify-between  text-right">
+                    WANT TO KNOW MORE?
+                  </button>
+                </li>
+                <li>
+                  <ul className=" flex justify-between items-end text-right gap-4">
+                    <li>
+                      <a
+                        href="https://www.linkedin.com/in/hectornovoa/"
+                        target="blank"
+                      >
+                        <LinkedinLogo
+                          style={" fill-white md:w-12 w-8 md:h-12 h-8"}
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://github.com/HectornsGit" target="blank">
+                        <GithubLogo
+                          style={" fill-white md:w-12 w-8 md:h-12 h-8"}
+                        />
+                      </a>
+                    </li>
+                    <li>CV</li>
+                  </ul>
+                </li>
+              </ul>
             </div>
           </div>
+
           <img
             src="./image.jpg"
             className=" lg:h-80 md:h-64  xl:w-1/3 lg:w-3/6 md:w-full  lg:self-auto md:self-center  lg:mr-8  md:object-cover  rounded-lg grow order-1"
