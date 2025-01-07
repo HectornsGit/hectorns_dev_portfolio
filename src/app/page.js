@@ -1,9 +1,11 @@
 "use client";
 import MainHeader from "../components/MainHeader";
 import AboutMe from "../components/AboutMe";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import ListProjectCards from "@/components/projects/listProjectCards";
 import ContactMe from "@/components/ContactMe";
+import Experience from "@/components/Experience";
+
 export default function Home() {
   const [projectList, setProjectList] = useState([
     {
@@ -29,11 +31,19 @@ export default function Home() {
     },
   ]);
 
+  const experience = useRef();
+  const projects = useRef();
+  const contactMe = useRef();
+
   return (
     <>
-      <MainHeader></MainHeader>
-      <main className="flex flex-col ">
-        <header>
+      <MainHeader
+        experience={experience}
+        projects={projects}
+        contactMe={contactMe}
+      ></MainHeader>
+      <main className="flex flex-col  mb-0 ">
+        <header className="mt-12">
           <div>
             <div className="absolute xl:pl-12 md:pl-8 xl:pt-10 md:pt-8 pl-4 pt-4 flex flex-col items-end sm:ml-48">
               <h1 className="text-[--cwhite]  xl:text-8xl md:text-5xl text-4xl  font-oswald font-normal w-full ">
@@ -50,7 +60,9 @@ export default function Home() {
           </div>
         </header>
         <AboutMe></AboutMe>
-        <section className=" flex flex-col mt-8 w-full self-center lg:mb-8 mb-4 ">
+        <Experience ref={experience}></Experience>
+        <div ref={projects}></div>
+        <section className=" flex flex-col  w-full self-center mb-64 mt-36">
           <header className=" self-center 2xl:w-4/6 lg:w-5/6 md:w-8/12 w-11/12">
             <h3 className="my-6 xl:text-3xl lg:text-2xl sm:text-xl font-semibold italic text-[--cyellow]  font-oswald">
               PROJECTS
@@ -60,7 +72,7 @@ export default function Home() {
             <ListProjectCards projectList={projectList}></ListProjectCards>
           )}
         </section>
-        <ContactMe></ContactMe>
+        <ContactMe ref={contactMe}></ContactMe>
       </main>
     </>
   );
