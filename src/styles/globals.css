@@ -21,3 +21,35 @@
 body {
   font-family: "Red Hat", Helvetica, sans-serif;
 }
+
+button + .neon {
+  background: var(--cdarkpurple);
+  position: absolute;
+  border-radius: 10px;
+  top: 44px;
+  width: 60px;
+  height: 40px;
+  z-index: 100;
+  transform: rotateX(40deg) scale(1.4, 0.3);
+  filter: blur(0.5em);
+  pointer-events: none;
+  animation: pulsate 3s infinite;
+}
+
+@keyframes pulsate {
+  0% {
+    transform: rotateX(40deg) scale(1.4, 0.3);
+    filter: blur(0.5em);
+    opacity: 1;
+  }
+  50% {
+    transform: rotateX(40deg) scale(1.6, 0.4);
+    filter: blur(0.7em);
+    opacity: 0.8;
+  }
+  100% {
+    transform: rotateX(40deg) scale(1.4, 0.3);
+    filter: blur(0.4em);
+    opacity: 1;
+  }
+}
