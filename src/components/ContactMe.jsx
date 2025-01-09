@@ -1,10 +1,20 @@
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 import EmailLogo from "./logos/EmailLogo";
 import LinkedinLogo from "./logos/LinkedinLogo";
 
-const ContactMe = ({ ref }) => {
+const ContactMe = ({ refAlter, setNeonState, initNeons }) => {
+  const { ref, inView, entry } = useInView({ threshold: 0 });
+  useEffect(() => {
+    if (inView) {
+      let neons = initNeons;
+      neons.contactMe = true;
+      setNeonState({ ...neons });
+    }
+  }, [inView]);
   return (
     <>
-      <div ref={ref}></div>
+      <div ref={refAlter}></div>
       <section className="CONTACT-ME lg:mb-64">
         <article className="mx-auto flex flex-col mt-8 justify-center 2xl:w-4/6 lg:w-5/6 md:w-8/12 w-11/12">
           <header>
@@ -56,6 +66,7 @@ const ContactMe = ({ ref }) => {
           </div>
         </article>
       </section>
+      <div ref={ref}></div>
     </>
   );
 };

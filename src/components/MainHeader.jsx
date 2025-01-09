@@ -1,35 +1,28 @@
 import { useEffect, useState } from "react";
-const MainHeader = ({ experience, projects, contactMe }) => {
-  let initNeons = {
-    aboutMe: false,
-    contactMeMe: false,
-    projects: false,
-    experience: false,
-  };
-
+const MainHeader = ({
+  experience,
+  projects,
+  contactMe,
+  setNeonState,
+  neonState,
+}) => {
   const handleScroll = (ref, sectionName) => {
-    let neons = initNeons;
     if (sectionName !== "aboutMe") {
-      ref?.current.scrollIntoView();
+      ref?.current.scrollIntoView({ behaviour: "smooth" });
     } else scrollTo(0, 0);
-
-    neons[sectionName] = true;
-    setNeonState({ ...neons });
   };
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [neonState, setNeonState] = useState();
 
-  useEffect(
-    () =>
-      setNeonState({
-        aboutMe: true,
-        contactMeMe: false,
-        projects: false,
-        experience: false,
-      }),
-    []
-  );
+  useEffect(() => {
+    setNeonState({
+      aboutMe: true,
+      contactMeMe: false,
+      projects: false,
+      experience: false,
+    });
+    scrollTo(0, 0);
+  }, []);
 
   if (
     experience.current !== null &&
