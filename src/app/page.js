@@ -88,7 +88,7 @@ export default function Home() {
           initNeons={initNeons}
         ></Experience>
         <div ref={projects}></div>
-        <section className=" flex flex-col  w-full self-center md:mb-64 mb-24 mt-36">
+        <section className=" flex flex-col  w-full self-center md:mb-72 mb-24 mt-36">
           <header className=" self-center 2xl:w-4/6 lg:w-5/6 md:w-8/12 w-11/12">
             <h3 className="my-6 xl:text-3xl lg:text-2xl sm:text-xl font-semibold italic text-[--cyellow]  font-oswald">
               PROJECTS

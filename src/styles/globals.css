@@ -55,3 +55,36 @@ button + .neon {
     opacity: 1;
   }
 }
+
+@keyframes slide-in {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 100;
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  75% {
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.open-menu {
+  animation: slide-in 0.5s ease-out;
+}
+
+.close-menu {
+  animation: slide-out 0.5s ease-out;
+  pointer-events: none; /* Evita interacciones durante el cierre */
+}
