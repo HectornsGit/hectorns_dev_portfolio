@@ -6,13 +6,20 @@ const MainHeader = ({
   setNeonState,
   neonState,
 }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const handleScroll = (ref, sectionName) => {
     if (sectionName !== "aboutMe") {
       ref?.current.scrollIntoView({ behaviour: "smooth" });
     } else scrollTo(0, 0);
   };
 
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const handleScrollMobile = (ref, sectionName) => {
+    if (sectionName !== "aboutMe") {
+      ref?.current.scrollIntoView({ behaviour: "smooth" });
+    } else scrollTo(0, 0);
+    setIsMenuOpen(false);
+  };
 
   useEffect(() => {
     setNeonState({
@@ -24,14 +31,13 @@ const MainHeader = ({
     scrollTo(0, 0);
   }, []);
 
-  if (
-    experience.current !== null &&
-    projects.current !== null &&
-    contactMe.current !== null
-  )
-    console.log(experience.current);
   return (
-    <header className="h-16 bg-cblack border-b-cdarkpurple border-b flex w-full items-center fixed z-50 ">
+    <header
+      className={
+        "bg-cblack border-b-cdarkpurple border-b flex w-full items-center fixed z-50" +
+        (isMenuOpen ? " h-screen " : " h-16 ")
+      }
+    >
       <nav className="text-[--cwhite] font-oswald font-light w-full   ">
         <ul className="md:flex gap-4 justify-self-end items-center mr-2 text-lg hidden">
           <li className="border-b-[--clightpurple]py-4 px-2  ">
@@ -73,24 +79,56 @@ const MainHeader = ({
           <li className="py-4 px-2">Other interests</li>
           <div className="neon"></div>
         </ul>
-
-        <div className=" md:hidden flex items-center justify-center bg-[--cblack] w-full">
-          <button className="">Menu</button>
-          <ul
+        <div
+          className={
+            " md:hidden flex items-center justify-center  bg-[--cblack] w-full" +
+            (isMenuOpen ? " h-screen " : " h-full ")
+          }
+        >
+          <button
+            className="self-start p-4"
+            onClick={() => {
+              setIsMenuOpen(!isMenuOpen);
+            }}
+          >
+            Menu
+          </button>
+          <menu
             className={
-              "absolute bg-[--cblack]  z-10 flex flex-col items-center justify-center text-lg w-full " +
+              "absolute bg-[--cblack] z-10 flex flex-col items-center justify-center text-lg w-full transition-all  " +
               (isMenuOpen
-                ? " flex flex-col items-center top-14  absolute bg-[--cblack]"
-                : "hidden")
+                ? "  items-center top-14  absolute bg-[--cblack] transition-all open-menu "
+                : " transition-all close-menu opacity-0  ")
             }
           >
-            <li className="border-b-[--clightpurple]  py-4">
-              <button>About Me</button>
+            <li className="grow py-4 px-2  ">
+              <button onClick={() => handleScrollMobile(null, "aboutMe")}>
+                About Me
+              </button>
             </li>
-            <li className="py-4 px-2">Contact Me</li>
-            <li className="py-4 px-2">Projects</li>
-            <li className="py-4 px-2">Other interests</li>
-          </ul>
+            <li className=" grow py-4 px-2">
+              <button
+                onClick={() => handleScrollMobile(experience, "experience")}
+              >
+                Experience
+              </button>
+            </li>
+            <li className=" grow py-4 px-2">
+              <button onClick={() => handleScrollMobile(projects, "projects")}>
+                Projects
+              </button>
+            </li>
+            <li className="grow py-4 px-2">
+              <button
+                onClick={() => {
+                  handleScrollMobile(contactMe, "contactMe");
+                }}
+              >
+                Contact Me
+              </button>
+            </li>
+            <li className=" grow py-4 px-2">Other interests</li>
+          </menu>
         </div>
       </nav>
     </header>
