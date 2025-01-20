@@ -15,7 +15,7 @@ const ContactMe = ({ refAlter, setNeonState, initNeons }) => {
   return (
     <>
       <div ref={refAlter}></div>
-      <section className="CONTACT-ME lg:mb-64">
+      <section className="CONTACT-ME lg:mb-64 mb-24">
         <article className="mx-auto flex flex-col mt-8 justify-center 2xl:w-4/6 lg:w-5/6 md:w-8/12 w-11/12">
           <header>
             <h3 className="my-6 xl:text-3xl lg:text-2xl sm:text-xl font-semibold italic text-[--cyellow]  font-oswald">
