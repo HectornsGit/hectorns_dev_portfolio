@@ -64,7 +64,7 @@ export default function Home() {
         setNeonState={setNeonState}
         initNeons={initNeons}
       ></MainHeader>
-      <main className="flex flex-col snap-proximity snap-y  mb-0 ">
+      <main className="bg-cblack flex flex-col snap-proximity snap-y  mb-0 ">
         <header className="mt-12">
           <div>
             <div className="absolute xl:pl-12 md:pl-8 xl:pt-10 md:pt-8 pl-4 pt-8 flex flex-col items-end lg:ml-48 sm:ml-36 ml-12">
