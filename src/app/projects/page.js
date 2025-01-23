@@ -16,10 +16,11 @@ const Projects = () => {
 
   const triggerAnimation = async () => {
     const mainPictureDiv = document.getElementById("mainPicture");
-    mainPictureDiv.style.animation = "fade-in 1s linear";
+
     setTimeout(() => {
-      mainPictureDiv.style.animation = "";
-    }, 1400);
+      mainPictureDiv.style.animation = "fade-in 1s linear";
+    }, 0);
+    mainPictureDiv.style.animation = "";
   };
 
   const handlePictureClick = async (e) => {
